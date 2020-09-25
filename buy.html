@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/buy.css">
+    <title>Buy - Spellbuild</title>
+</head>
+<body>
+    <div class="dispContainer">
+        <!-- Header -->
+        <div class="header">
+            <input type="checkbox" id="checkNav" role="button">
+            <div class="mobileContainer">
+                <div class="logo">
+                    <img src="images/gameIcon.png" alt="logo">
+                    <span>SPELLBUILD</span>
+                </div>
+                <div class="mobileButton">
+                    <label for="checkNav">
+                        <h2 class="hambutton">&#9776;</h2>
+                    </label>
+                </div>
+            </div>
+            <ul class="navi-links">
+                <li><a href="index.html" target="_parent">Home</a></li>
+                <li><a href="media.html" target="_parent">Media</a></li>
+                <li><a href="aboutUs.html" target="_parent">About Us</a></li>
+                <li><a href="community.html" target="_parent">Community</a></li>
+                <li><a href="buy.html" target="_parent" class="active">Buy</a></li>
+            </ul>
+        </div>
+        <div class="headerHandler"></div>
+        <!-- tulis coding html mulai dari sini!!! -->
+        <div class="formContainer">
+            <h1>What are you waiting for?</h1>
+            <h3>Join the force now by filling the form below!</h3>
+            <form name="Register" id="regisForm">
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Full Name</p>
+                        <p class="errText" id="errFullName"></p>
+                    </div>
+                    <input type="text" name="" id="usrFullName" oninput="validateFullName()">
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Email</p>
+                        <p class="errText" id="errEmail"></p>
+                    </div>
+                    <input type="text" name="" id="usrEmail" oninput="validateEmail()">
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Username</p>
+                        <p class="errText" id="errUsername"></p>
+                    </div>
+                    <input type="text" name="" id="usrName" oninput="validateUserName()">
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Password</p>
+                        <p class="errText" id="errPassword"></p>
+                    </div>
+                    <input type="password" name="" id="usrPwd" oninput="validatePassword()">
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Confirm Password</p>
+                        <p class="errText" id="errCPwd"></p>
+                    </div>
+                    <input type="password" name="" id="usrCPwd" oninput="validateCPassword()">
+                </div>
+                <div class="inputContainer formHorizontal">
+                    <p>Gender: </p>
+                    <p class="errText" id="errGender"></p>
+                    <div>
+                        <input type="radio" name="gender" id="gdrMale" onclick="validateGender()">
+                        <label for="gdrMale">Male</label>
+                        <input type="radio" name="gender" id="gdrFemale" onclick="validateGender()">
+                        <label for="gdrFemale">Female</label>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Quantity</p>
+                        <p class="errText" id="errQty"></p>
+                    </div>
+                    <input type="number" name="" id="usrQty" oninput="validateQty()">
+                </div>
+                <div class="inputContainer">
+                    <div class="formHorizontal">
+                        <p>Address</p>
+                        <p class="errText" id="errAddress"></p>
+                    </div>
+                    <textarea name="" id="usrAddress" cols="30" rows="10" oninput="validateAddress()"></textarea>
+                </div>
+                <div class="inputContainer formHorizontal aggreement">
+                    <p class="errText" id="errChkAgree">Must be checked!</p>
+                    <input type="checkbox" name="" id="chkAgree" onclick="validateAgreement()">
+                    <label for="chkAgree">I agree with the terms and conditions</label>
+                </div>
+                <div class="formHorizontal">
+                    <input type="button" value="Submit" onclick="submitData()">
+                </div>
+            </form>
+        </div>
+        <!-- untuk footer. jangan diutak-atik -->
+        <div class="footer">
+            <p>&copy;2020 Spellbuild Inc.</p>
+        </div>
+    </div>
+    <script src="JS/buy.js"></script>
+</body>
+</html>

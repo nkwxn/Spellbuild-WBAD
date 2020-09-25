@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Media - Spellbuild</title>
+</head>
+<body onload="caurosel()">
+    <div class="dispContainer">
+        <!-- Header -->
+        <div class="header">
+            <input type="checkbox" id="checkNav" role="button">
+            <div class="mobileContainer">
+                <div class="logo">
+                    <img src="images/gameIcon.png" alt="logo">
+                    <span>SPELLBUILD</span>
+                </div>
+                <div class="mobileButton">
+                    <label for="checkNav">
+                        <h2 class="hambutton">&#9776;</h2>
+                    </label>
+                </div>
+            </div>
+            <ul class="navi-links">
+                <li><a href="index.html" target="_parent">Home</a></li>
+                <li><a href="media.html" target="_parent" class="active">Media</a></li>
+                <li><a href="aboutUs.html" target="_parent">About Us</a></li>
+                <li><a href="community.html" target="_parent">Community</a></li>
+                <li><a href="buy.html" target="_parent">Buy</a></li>
+            </ul>
+        </div>
+        <div class="headerHandler"></div>
+        <!-- tulis coding html mulai dari sini!!! -->
+        <div class="mediaContainer">
+            <h1>Gameplay Screenshots</h1>
+            <div class="banner">
+                <div class="imageContainer">
+                    <div class="imageItem bnnrActive">
+                        <img src="images/gameplayScreenShots/1.jpg" alt="">
+                    </div>
+                    <div class="imageItem">
+                        <img src="images/gameplayScreenShots/2.jpg" alt="">
+                    </div>
+                    <div class="imageItem">
+                        <img src="images/gameplayScreenShots/3.jpg" alt="">
+                    </div>
+                    <div class="imageItem">
+                        <img src="images/gameplayScreenShots/4.jpg" alt="">
+                    </div>
+                    <div class="imageItem">
+                        <img src="images/gameplayScreenShots/5.jpg" alt="">
+                    </div>
+                    <div class="imageItem">
+                        <img src="images/gameplayScreenShots/6.jpg" alt="">
+                    </div>
+                </div>
+                <!-- Kontrol untuk slider -->
+                <div class="ctrlLeft" onclick="next('prev')">
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="ctrlRight" onclick="next('next')">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mediaContainer">
+            <h1>Fan Arts</h1>
+            <div class="fanArtCont">
+                <div class="gallery" id="gallery">
+                    <div class="galThumbs" onclick="fanartPressed(0)">
+                        <img src="images/fanArt/moksquared.jpg" alt="">
+                        <h4>by: moksquared</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(1)">
+                        <img src="images/fanArt/Bogyfobiya.jpg" alt="">
+                        <h4>by: Bogyfobiya</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(2)">
+                        <img src="images/fanArt/emiyaneechan.jpg" alt="">
+                        <h4>by: emiyaneechan</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(3)">
+                        <img src="images/fanArt/goodmode.png" alt="">
+                        <h4>by: goodmode</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(4)">
+                        <img src="images/fanArt/JonCerber-SzW.jpg" alt="">
+                        <h4>by: JonCerber-SzW</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(5)">
+                        <img src="images/fanArt/Ransack001.png" alt="">
+                        <h4>by: Ransack001</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(6)">
+                        <img src="images/fanArt/Raphire.jpg" alt="">
+                        <h4>by: Raphire</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(7)">
+                        <img src="images/fanArt/ten-gou.jpg" alt="">
+                        <h4>by: ten-gou</h4>
+                    </div>
+                    <div class="galThumbs" onclick="fanartPressed(8)">
+                        <img src="images/fanArt/TTJoey.jpg" alt="">
+                        <h4>by: TTJoey</h4>
+                    </div>
+                </div>
+                <div class="artPreview" id="preview">
+                    <div class="previewHeader">
+                        <i class="fa fa-arrow-left" onclick="closeButtonClicked()"></i>
+                        <h4 id="fnrtAuth">Viewing Fanart by moksquared</h4>
+                        <i class="previewWindowHandler"></i>
+                    </div>
+                    <img src="images/fanArt/moksquared.jpg" alt="" id="imgPreview">
+                </div>
+            </div>
+        </div>
+        <!-- untuk footer. jangan diutak-atik -->
+        <div class="footer">
+            <p>&copy;2020 Spellbuild Inc.</p>
+        </div>
+    </div>
+    <script src="JS/media.js"></script>
+</body>
+</html>
