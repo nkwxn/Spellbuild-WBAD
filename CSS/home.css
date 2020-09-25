@@ -1,0 +1,36 @@
+body {
+    background-image: url("../images/home-bckgrnd.jpg");
+}
+/* untuk content menu home */
+.blackBox {
+    max-width: 1000px;
+    text-align: center;
+    margin: 25px;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+.blackBox p {
+    margin: 20px 0;
+}
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.buttonContainer a {
+    border: 0;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f0c419;
+    color: black;
+    font-size: 16pt;
+    text-decoration: none;
+    max-width: 160px;
+    transition: all 0.2s;
+}
+.buttonContainer a:hover {
+    background-color: #f3b21c;
+}

@@ -1,0 +1,147 @@
+body {
+    background-image: url(../images/media-bckgrnd.jpg);
+}
+.mediaContainer {
+    text-align: center;
+    margin: 25px;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+/* CSS untuk membuat Banner Gameplay Screenshot */
+.banner {
+    margin-top: 20px;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.ctrlLeft,
+.ctrlRight {
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    color: white;
+    font-size: 28px;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.ctrlLeft:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.ctrlRight:hover {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.ctrlLeft {
+    left: 0;
+}
+.ctrlRight {
+    right: 0;
+}
+.banner .imageContainer .imageItem img {
+    max-width: 100%;
+    display: block;
+    animation: zoom 0.5s ease;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.banner .imageContainer .imageItem {
+    display: none;
+    position: relative;
+}
+.banner .imageContainer .imageItem .imgCaption {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+    font-weight: normal;
+}
+.banner .imageContainer .imageItem.bnnrActive {
+    display: block;
+    background-color: black;
+}
+
+/* Fan art: gallery */
+.fanArtCont {
+    max-width: 800px;
+}
+.gallery {
+    margin-top: 7.5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.galThumbs {
+    width: 225px;
+    height: 225px;
+    position: relative;
+    margin: 12.5px;
+    cursor: pointer;
+}
+.galThumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.galThumbs h4 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    transition: all 0.5s ease-in-out;
+}
+.galThumbs:hover h4 {
+    font-size: 20px;
+    line-height: 50px;
+    padding: 87.5px 0;
+    margin: auto;
+}
+.artPreview {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    border: 10px solid black;
+}
+.artPreview img {
+    height: 100%;
+    width: 100%;
+}
+.previewHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.previewHeader .fa {
+    padding: 13px;
+    background-color: #e35139;
+}
+.previewWindowHandler {
+    width: 39.72px;
+    height: 42px;
+}

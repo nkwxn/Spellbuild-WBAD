@@ -1,0 +1,60 @@
+body {
+    background-image: url(../images/buy-bckgrnd.jpg);
+}
+.formContainer {
+    margin: 25px;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+.formContainer h1,
+.formContainer h3 {
+    text-align: center;
+}
+.formContainer form input[type=text],
+.formContainer form input[type=password],
+.formContainer form input[type=number],
+.formContainer form textarea {
+    width: 100%;
+    background-color:#fcebc4;
+    color: #442727;
+    border: 1px solid #f3b21c;
+    border-radius: 10px;
+    padding: 8px 5px;
+    font-size: 13pt;
+}
+.formContainer form input[type=button] {
+    border: 0;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f0c419;
+    color: black;
+    font-size: 16pt;
+    max-width: 160px;
+    transition: all 0.2s;
+}
+.formContainer form input[type=button]:hover {
+    background-color: #f3b21c;
+}
+.inputContainer {
+    margin: 10px 0;
+}
+.formHorizontal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.errText {
+    background-color: red;
+    padding: 0 5px;
+}
+#errChkAgree {
+    opacity: 0;
+}
+.aggreement {
+    justify-content: center;
+}

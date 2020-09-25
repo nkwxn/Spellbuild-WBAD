@@ -1,0 +1,125 @@
+body {
+    background-image: url(../images/about-bckgrnd.jpg);
+}
+.aboutContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 25px;
+    height: 500px;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+.contentLeftFlexContainer {
+    overflow-y: scroll;
+}
+.contentLeft {
+    flex-direction: column;
+    display: flex;
+    width: 150px;
+    margin-right: 20px;
+}
+.contentLeftFlexContainer::-webkit-scrollbar {
+    display: none;
+}
+.vidThumbTitle {
+    width: 150px;
+    height: 85px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+.vidThumbTitle img,
+.vidThumbTitle h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 85px;
+    backface-visibility: hidden;
+    transition: all 0.5s;    
+}
+.vidThumbTitle img {
+    object-fit: cover;
+}
+.vidThumbTitle h3 {
+    background-color: #e35139;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.vidThumbTitle img,
+.vidThumbTitle:hover h3 {
+    transform: rotateY(0deg);
+}
+.vidThumbTitle h3,
+.vidThumbTitle:hover img {
+    transform: rotateY(180deg);
+}
+.contentRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    overflow-y: scroll;
+}
+.contentRight::-webkit-scrollbar {
+    display: none;
+}
+#noHover {
+    width: 650px;
+}
+#imgHovered video {
+    height: auto !important;
+    width: inherit !important;
+}
+#imgHovered {
+    height: 450px;
+    width: 650px;
+    display: none;
+}
+#imgHovered p {
+    text-align: justify;
+}
+@media only screen and (max-width: 850px) {
+    .contentLeftFlexContainer {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .aboutContent {
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100%;
+        border-width: 5px 0;
+    }
+    .contentLeft {
+        flex-direction: row;
+        margin-top: 20px;
+        margin-right: 0;
+        width: max-content;
+    }
+    .vidThumbTitle {
+        margin: 0;
+        margin: 0 10px;
+    }
+    .contentRight {
+        max-width: 100%;
+        height: 450px;
+    }
+    #noHover {
+        max-width: inherit;
+    }
+    #imgHovered {
+        height: 450px;
+        max-width: inherit;
+    }
+    #imgHovered video {
+        height: auto !important;
+        max-width: inherit !important;
+    }
+}

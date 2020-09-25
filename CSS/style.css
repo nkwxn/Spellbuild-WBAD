@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.headerHandler {
+    height: 80px;
+    width: 100%;
+    padding: 40px;
+    background-color: black;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-bottom: gray 1pt ;
+}
+.navi-links {
+    display: flex;
+    list-style-type: none;
+    margin: 6px 15px;
+}
+.navi-links li a {
+    display: block;
+    width: 110px;
+    padding: 19.5px 0;
+    margin: 5px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.mobileButton {
+    margin: 22px 15px;
+    display: none;
+}
+.closebutton {
+    display: none;
+}
+.navi-links li a,
+.mobileButton {
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+.navi-links li a:hover {
+    background-color: #879797;
+    text-decoration: none;
+}
+.navi-links li a:active {
+    background-color: #547580;
+}
+.active {
+    background-color: #e35139;
+}
+.mobileContainer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.logo img {
+    height: 55px;
+    width: auto;
+}
+.logo span {
+    margin: 15px;
+    font-family: 'Girassol', cursive;
+    font-size: 24pt;
+    color: white;
+}
+.hamButton {
+    cursor: pointer;
+}
+#checkNav {
+    display: none;
+}
+/* responsive view for mobile */
+@media only screen and (max-width: 895px) {
+    .mobileContainer {
+        height: 80px;
+        z-index: 10;
+    }
+    .header {
+        flex-direction: column;
+        height: 80px;
+    }
+    #checkNav:checked ~ .navi-links {
+        display: flex;
+        opacity: 1;
+        transform: translateY(80px);
+    }
+    .navi-links {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        background-color: black;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        transform: translateY(0);
+        transition: all 0.3s;
+    }
+    .navi-links li {
+        width: 100%;
+        margin: 5px;
+    }
+    .navi-links li a {
+        margin: 0;
+        width: 100%;
+    }
+    .mobileButton {
+        display: block;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 555px) {
+    .navi-links {
+        flex-direction: column;
+        transform: translateY(-220px);
+        width: 100%;
+        margin: 0;
+        transition: all 0.5s;
+    }
+    .navi-links li,
+    .navi-links li a {
+        width: 100%;
+        margin: 0;
+    }
+}
+/* Container */
+.dispContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* footer universal */
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.footer p {
+    padding: 20px;
+    text-align: center;
+}
